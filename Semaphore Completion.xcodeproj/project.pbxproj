@@ -8,16 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4A678B3B1A72D36100CB7B93 /* SemaphoreCompletionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A678B3A1A72D36100CB7B93 /* SemaphoreCompletionTests.m */; };
-		4A678B3C1A72D37600CB7B93 /* SYMLSemaphoreCompletion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A678B0E1A72C8E200CB7B93 /* SYMLSemaphoreCompletion.m */; };
-		4AAB0E421A753BD900934E18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AAB0E411A753BD900934E18 /* Info.plist */; };
+		4AAB0E491A754FC000934E18 /* SYMLSemaphoreCompletion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB0E481A754FC000934E18 /* SYMLSemaphoreCompletion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A678B0D1A72C8E200CB7B93 /* SYMLSemaphoreCompletion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMLSemaphoreCompletion.h; sourceTree = "<group>"; };
-		4A678B0E1A72C8E200CB7B93 /* SYMLSemaphoreCompletion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMLSemaphoreCompletion.m; sourceTree = "<group>"; };
 		4A678B2E1A72D1AE00CB7B93 /* Semaphore Completion.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Semaphore Completion.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A678B3A1A72D36100CB7B93 /* SemaphoreCompletionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SemaphoreCompletionTests.m; path = Tests/SemaphoreCompletionTests.m; sourceTree = SOURCE_ROOT; };
 		4AAB0E411A753BD900934E18 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
+		4AAB0E471A754FC000934E18 /* SYMLSemaphoreCompletion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYMLSemaphoreCompletion.h; path = Classes/SYMLSemaphoreCompletion.h; sourceTree = "<group>"; };
+		4AAB0E481A754FC000934E18 /* SYMLSemaphoreCompletion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYMLSemaphoreCompletion.m; path = Classes/SYMLSemaphoreCompletion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,8 +33,8 @@
 		4A678ADB1A72C85000CB7B93 = {
 			isa = PBXGroup;
 			children = (
-				4A678B0D1A72C8E200CB7B93 /* SYMLSemaphoreCompletion.h */,
-				4A678B0E1A72C8E200CB7B93 /* SYMLSemaphoreCompletion.m */,
+				4AAB0E471A754FC000934E18 /* SYMLSemaphoreCompletion.h */,
+				4AAB0E481A754FC000934E18 /* SYMLSemaphoreCompletion.m */,
 				4A678B2F1A72D1AE00CB7B93 /* Tests */,
 				4A678AE51A72C85000CB7B93 /* Products */,
 			);
@@ -116,7 +115,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AAB0E421A753BD900934E18 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A678B3B1A72D36100CB7B93 /* SemaphoreCompletionTests.m in Sources */,
-				4A678B3C1A72D37600CB7B93 /* SYMLSemaphoreCompletion.m in Sources */,
+				4AAB0E491A754FC000934E18 /* SYMLSemaphoreCompletion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +171,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -209,6 +208,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -229,6 +229,7 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_CFLAGS = "-Wall";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -245,6 +246,7 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_CFLAGS = "-Wall";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};

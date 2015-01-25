@@ -207,7 +207,7 @@ typedef NS_ENUM(NSUInteger, SYMLSemaphoreState) {
 		if(__semaphoreState != SYMLSemaphoreStateCompleted
 			&& __semaphoreState != SYMLSemaphoreStateNoTasksAdded) {
 			// Treat this as programmer error
-			NSLog(@"SYMLSemaphoreCompletion was deallocated with %ld unfinished tasks", [__semaphoreTokens count]);
+			NSLog(@"SYMLSemaphoreCompletion was deallocated with %ld unfinished tasks", (long)[__semaphoreTokens count]);
 			[self performFailureBlock:FALSE asynchronously:FALSE];
 		}
 	});

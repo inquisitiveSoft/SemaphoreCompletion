@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A1198681A75CD7A003944A1 /* SYMLSemaphoreCompletion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB0E481A754FC000934E18 /* SYMLSemaphoreCompletion.m */; };
 		4A678B3B1A72D36100CB7B93 /* SemaphoreCompletionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A678B3A1A72D36100CB7B93 /* SemaphoreCompletionTests.m */; };
 		4AAB0E491A754FC000934E18 /* SYMLSemaphoreCompletion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB0E481A754FC000934E18 /* SYMLSemaphoreCompletion.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4A11984F1A75CD3F003944A1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		4A678B2E1A72D1AE00CB7B93 /* Semaphore Completion.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Semaphore Completion.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A1198511A75CD3F003944A1 /* libSemaphoreCompletion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSemaphoreCompletion.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A678B2E1A72D1AE00CB7B93 /* Semaphore Completion Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Semaphore Completion Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A678B3A1A72D36100CB7B93 /* SemaphoreCompletionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SemaphoreCompletionTests.m; path = Tests/SemaphoreCompletionTests.m; sourceTree = SOURCE_ROOT; };
 		4AAB0E411A753BD900934E18 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
 		4AAB0E471A754FC000934E18 /* SYMLSemaphoreCompletion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYMLSemaphoreCompletion.h; path = Classes/SYMLSemaphoreCompletion.h; sourceTree = "<group>"; };
@@ -20,6 +34,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4A11984E1A75CD3F003944A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A678B2B1A72D1AE00CB7B93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,7 +64,8 @@
 		4A678AE51A72C85000CB7B93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A678B2E1A72D1AE00CB7B93 /* Semaphore Completion.xctest */,
+				4A678B2E1A72D1AE00CB7B93 /* Semaphore Completion Tests.xctest */,
+				4A1198511A75CD3F003944A1 /* libSemaphoreCompletion.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,9 +83,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4A678B2D1A72D1AE00CB7B93 /* Semaphore Completion */ = {
+		4A1198501A75CD3F003944A1 /* SemaphoreCompletion */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A678B341A72D1AE00CB7B93 /* Build configuration list for PBXNativeTarget "Semaphore Completion" */;
+			buildConfigurationList = 4A1198621A75CD40003944A1 /* Build configuration list for PBXNativeTarget "SemaphoreCompletion" */;
+			buildPhases = (
+				4A11984D1A75CD3F003944A1 /* Sources */,
+				4A11984E1A75CD3F003944A1 /* Frameworks */,
+				4A11984F1A75CD3F003944A1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SemaphoreCompletion;
+			productName = SemaphoreCompletion;
+			productReference = 4A1198511A75CD3F003944A1 /* libSemaphoreCompletion.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4A678B2D1A72D1AE00CB7B93 /* Semaphore Completion Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A678B341A72D1AE00CB7B93 /* Build configuration list for PBXNativeTarget "Semaphore Completion Tests" */;
 			buildPhases = (
 				4A678B2A1A72D1AE00CB7B93 /* Sources */,
 				4A678B2B1A72D1AE00CB7B93 /* Frameworks */,
@@ -73,9 +112,9 @@
 			);
 			dependencies = (
 			);
-			name = "Semaphore Completion";
+			name = "Semaphore Completion Tests";
 			productName = "Semaphore Completion";
-			productReference = 4A678B2E1A72D1AE00CB7B93 /* Semaphore Completion.xctest */;
+			productReference = 4A678B2E1A72D1AE00CB7B93 /* Semaphore Completion Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -87,6 +126,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Inquisitive Software";
 				TargetAttributes = {
+					4A1198501A75CD3F003944A1 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					4A678B2D1A72D1AE00CB7B93 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -105,7 +147,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A678B2D1A72D1AE00CB7B93 /* Semaphore Completion */,
+				4A1198501A75CD3F003944A1 /* SemaphoreCompletion */,
+				4A678B2D1A72D1AE00CB7B93 /* Semaphore Completion Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -121,6 +164,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4A11984D1A75CD3F003944A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A1198681A75CD7A003944A1 /* SYMLSemaphoreCompletion.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A678B2A1A72D1AE00CB7B93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +184,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		4A1198631A75CD40003944A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4A1198641A75CD40003944A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		4A678B051A72C85000CB7B93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -255,6 +328,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4A1198621A75CD40003944A1 /* Build configuration list for PBXNativeTarget "SemaphoreCompletion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A1198631A75CD40003944A1 /* Debug */,
+				4A1198641A75CD40003944A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		4A678ADF1A72C85000CB7B93 /* Build configuration list for PBXProject "Semaphore Completion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -264,7 +345,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A678B341A72D1AE00CB7B93 /* Build configuration list for PBXNativeTarget "Semaphore Completion" */ = {
+		4A678B341A72D1AE00CB7B93 /* Build configuration list for PBXNativeTarget "Semaphore Completion Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A678B351A72D1AE00CB7B93 /* Debug */,

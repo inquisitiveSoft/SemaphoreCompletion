@@ -158,10 +158,10 @@ typedef NS_ENUM(NSUInteger, SYMLSemaphoreState) {
 
 - (void)performSuccessBlock
 {
-	dispatch_queue_t successBlock = self.successBlock;
+	void (^successBlock) (void)  = self.successBlock;
 	
 	if(successBlock) {
-		dispatch_async(self.resultQueue, (id)successBlock);
+		dispatch_async(self.resultQueue, successBlock);
 		__semaphoreState = SYMLSemaphoreStateCompleted;
 	}
 }

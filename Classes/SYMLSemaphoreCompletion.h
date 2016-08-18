@@ -11,6 +11,8 @@
 
 @interface SYMLSemaphoreCompletion : NSObject
 
+NS_ASSUME_NONNULL_BEGIN
+
 - (instancetype)init;	// Will use an internal queue
 - (instancetype)initWithResultQueue:(dispatch_queue_t)queue;
 
@@ -19,5 +21,6 @@
 
 - (void)addSuccessBlock:(void (^) (void))successBlock failureBlock:(void (^)(BOOL))failureBlock;
 
+NS_ASSUME_NONNULL_END
 
 @end

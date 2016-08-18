@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SemaphoreCompletion"
-  s.version          = "0.1.2"
+  s.version          = "1.0"
   s.summary          = "SemaphoreCompletion"
   s.description      = <<-DESC
     SYMLSemaphoreCompletion performs a completion block when a group of tasks have finished. It's conceptually similar to XCTest's expectations.
